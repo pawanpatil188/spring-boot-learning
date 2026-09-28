@@ -61,3 +61,46 @@ Created my first Spring Boot application.
 | GET    | `/student/{id}/name`         | Get student information using ID       |
 | GET    | `/student/search?name=Pawan` | Search using request parameter         |
 | GET    | `/calculate?a=10&b=20`       | Calculate sum using request parameters |
+
+
+
+
+
+## Day 3 — Controller and Service Layer
+
+### Topics Practiced
+
+* Layered architecture
+* Controller layer
+* Service layer
+* `@Service`
+* Dependency Injection
+* Constructor Injection
+* IoC basics
+* Business logic separation
+
+### Architecture
+
+```text
+Client
+  ↓
+Controller
+  ↓
+Service
+  ↓
+Response
+```
+
+### APIs
+
+| Method | Endpoint        | Description              |
+| ------ | --------------- | ------------------------ |
+| GET    | `/student`      | Gets student information |
+| GET    | `/calculate`    | Calculates sum           |
+| GET    | `/check-number` | Checks even/odd          |
+| GET    | `/square`       | Calculates square        |
+| GET    | `/greet`        | Returns greeting         |
+
+### Key Learning
+
+The Controller handles HTTP requests, while the Service layer contains business logic. Spring manages the service object and injects it into the Controller using Dependency Injection.
