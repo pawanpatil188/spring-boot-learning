@@ -1,28 +1,27 @@
 package com.pawan.LearningSpringBoot.service;
 
+import com.pawan.LearningSpringBoot.component.MessageComponent;
+import com.pawan.LearningSpringBoot.model.Student;
 import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
 
+    private final MessageComponent messageComponent;
+
+    public StudentService(MessageComponent messageComponent) {
+        this.messageComponent = messageComponent;
+    }
+
     public String getStudent() {
-        return "Student: Pawan, Course: Java";
+        return "Student : Pawan, Course : Java";
     }
 
-    public int calculateSum(int a, int b){
-        return a+b;
+    public String getMessage() {
+        return messageComponent.getMessage();
     }
 
-    public String checkEvenOdd(int num){
-        if (num % 2 == 0){
-            return "EVEN";
-        }
-
-        return "ODD";
+    public Student createStudent(Student student) {
+        return student;
     }
-    public int squareOfNumber(int num) {
-        int sq = num * num;
-        return sq;
-    }
-
 }

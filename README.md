@@ -104,3 +104,67 @@ Response
 ### Key Learning
 
 The Controller handles HTTP requests, while the Service layer contains business logic. Spring manages the service object and injects it into the Controller using Dependency Injection.
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Day 5 — POST API + @RequestBody + JSON
+
+### Topics Covered
+
+* POST API
+* `@PostMapping`
+* `@RequestBody`
+* JSON
+* JSON → Java Object
+* Java Object → JSON
+* Serialization
+* Deserialization
+* Testing API using Postman
+
+### Practical
+
+Created a POST API:
+
+`POST /student`
+
+### Request Body
+
+```json
+{
+    "name": "Pawan",
+    "age": 22,
+    "course": "Java"
+}
+```
+
+### Flow
+
+```text
+Postman
+   ↓
+JSON Request
+   ↓
+Controller
+   ↓
+@RequestBody
+   ↓
+Student Object
+   ↓
+Service
+   ↓
+JSON Response
+```
+
+### Result
+
+Successfully received JSON data using `@RequestBody` and returned the Student object as a JSON response.
